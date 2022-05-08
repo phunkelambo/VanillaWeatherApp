@@ -1,0 +1,74 @@
+body {
+        font-family: arial,sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    list-style: none;
+   font-size: 18px;
+   margin-block-start: 0px;
+  }
+
+
+
+.container {
+    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, hsla(180, 65%, 51%, 0.459), #103e50ec);
+    border-radius: 10px;
+    padding: 10px 5px 50px 10px;
+    inline-size: 500px;
+    margin: 30px auto;
+    max-width: 600px;
+    border: 1px solid rgba(175, 127, 171, 0.144);
+  }
+
+  h1 {
+    padding: 0px; 
+    max-width 100%;
+    text-align: start
+    font-weight: bold;
+    display: inline;
+    line-height: 18px;
+    margin-block-start: 0px;
+    margin-block-end: 5px;
+    margin-inline-end: 8px;
+  }
+  
+  h2 {
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+    max-inline-size: 100%;
+    text-align: center;
+    color: whitesmoke;
+    margin: none;
+  
+  }
+  #Icon {
+    display: block;
+    text-align: center;
+    margin-left: 75px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+  }
+
+  #city {
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    margin-inline-end: 8px;
+    margin-block-end:10px;
+
+  }
+  #Temperature {
+      font-weight: bold;
+      font-size: 28px;
+      text-align: center;
+      margin-inline-end: 8px;
+      margin-block-end: 10px;
+  }
+
+  #searchInput {
+      margin-bottom: 5px;
+  }
