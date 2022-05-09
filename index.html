@@ -15,35 +15,36 @@
 <div class="container">
 <form id="searchInput"> 
 <input type="text" class="search" id="cityName" placeholder="Type city here" autocomplete="off" autofocus="on" />
-<button type="button" class="btn btn-primary">Submit</button>
+<button type="button" class="btn btn-outline-dark btn-sm">Submit</button>
 </form>
 <h1>
    <ul id="basicInfo">
+    <li id="city">
+        New York
+    </li>
     <li id="date">
         Sunday, May 05, 2022
     </li>
     <li id="time">
         11:00am
     </li>
-<li id="city">
-    NewYork
-</li>
-<li id="Temperature">
-    21 °C |°F
-</li>
+
    </ul>
    </h1>
    <h2>
+    <p id="Temperature">
+        21 °C |°F
+    </p>
     <div class="row">
        <div class="col-6" id="Icon">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" class="imageFluid" alt="weatherCondition" width="300" />
-    <p>Cloudy</p>
+    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" class="imageFluid" alt="weatherCondition" width="300"> 
 </div>
 </div>
    </h2>
    <h3>
     <div class="col-6">
         <ul class="forecast">
+         <li id="description"> Cloudy</li>
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind: <span id="wind"></span> km/h</li>
         </ul>

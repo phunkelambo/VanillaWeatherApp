@@ -1,5 +1,5 @@
 body {
-        font-family: arial,sans-serif;
+        font-family:  "Times New Roman", Times, serif;
 }
 
 ul {
@@ -11,7 +11,13 @@ ul {
    margin-block-start: 0px;
   }
 
-
+p {
+    color:  black;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-left: 15px;
+    padding-top: 0px;
+}
 
 .container {
     background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, hsla(180, 65%, 51%, 0.459), #103e50ec);
@@ -25,8 +31,8 @@ ul {
 
   h1 {
     padding: 0px; 
-    max-width 100%;
-    text-align: start
+    max-width: 100%;
+    text-align: start;
     font-weight: bold;
     display: inline;
     line-height: 18px;
@@ -37,30 +43,44 @@ ul {
   
   h2 {
     font-size: 16px;
-    padding: 5px 0px 5px 0px;
     max-inline-size: 100%;
     text-align: center;
     color: whitesmoke;
-    margin: none;
+    margin-bottom: 10px;
+    line-height: 10px;
   
   }
+
+  h3 {
+    font-size: 14px;
+    text-align: center;  
+    font-weight: bold;
+    margin-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
   #Icon {
     display: block;
     text-align: center;
     margin-left: 75px;
     margin-top: 5px;
     margin-bottom: 0px;
+    padding-bottom: 0px;
     
   }
 
   #city {
     font-weight: bold;
     font-size: 38px;
-    text-align: center;
+    text-align: left;
+    margin-top: 10px;
     margin-inline-end: 8px;
     margin-block-end:10px;
+    line-height: 20px;
 
   }
+
   #Temperature {
       font-weight: bold;
       font-size: 28px;
@@ -71,4 +91,9 @@ ul {
 
   #searchInput {
       margin-bottom: 5px;
+    
+  }
+
+a {
+    color: #c8ff00;
   }
