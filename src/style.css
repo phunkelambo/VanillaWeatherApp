@@ -97,3 +97,6 @@ p {
 a {
     color: #c8ff00;
   }
+span.celsius {
+      position: relative;
+  }
