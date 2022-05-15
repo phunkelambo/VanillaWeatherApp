@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/style.css" />
+
     <title>Vanilla WeatherApp</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css">
 </head>  
 
 <body>
 <div class="container">
-<form id="searchInput"> 
-<input type="text" class="search" id="cityName" placeholder="Type city here" autocomplete="off" autofocus="on" />
-<button type="button" class="btn btn-outline-dark btn-sm">Submit</button>
+    <div class="vanillaApp-wrapper">
+        <div class="vanillaApp">
+            <form id="searchForm">
+            <input type="text" 
+            class="search" 
+            id="cityName" 
+            placeholder="Type city here" 
+            autocomplete="off" 
+            autofocus="on" 
+            />
+      <input type="submit" value="search" />
+</div>
+</div>
 </form>
-<h1>
-   <ul id="basicInfo">
-    <li id="city">
-        New York
-    </li>
-    <li id="date">
-        Sunday, May 05, 2022
-    </li>
-    <li id="time">
-        11:00am
-    </li>
-
+<div class="searchDetails">
+    <h1 id="city">
+ NewYork  
+<ul>
+    <li id="date"></li>
+    <li id="time"></li>    
    </ul>
-   </h1>
+   </div>
+</h1>
    <h2>
-    <p id="Temperature">
-        <strong>21</strong
-            ><span class="celsius">°C | <a href="#">°F</a></
-                span>
-    </p>
     <div class="row">
-       <div class="col-6" id="Icon">
-    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" class="imageFluid" alt="weatherCondition" width="300"> 
-</div>
-</div>
-   </h2>
-   <h3>
-    <div class="col-6">
-        <ul class="forecast">
-         <li id="description"> Cloudy</li>
+       <div class="col-9">
+       <div class="clearfix temp">
+    <img src="" class="float-left" id="Icon" alt="" /> 
+       <div class="float-left">
+        <strong id="temperature"></strong
+            ><span class="celsius"> °C | <a href="#">°F</a></span>
+            </div>
+       </div>
+       </div>
+       </div>
+    </h2>
+    <h3>
+      <div class="col" >
+        <ul id="condition">
+          <li>Cloudy <span id="description"></span></li>
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind: <span id="wind"></span> km/h</li>
         </ul>
-   </h3>
-
-<footer><a href="https://github.com/phunkelambo/VanillaWeatherApp">Open-source code</a> by Phunke Lambo</footer>
+    </div>
+    <div class="weather-forecast" id="forecast"></div>
+</h3>
+<div id="footer">
+    <a 
+    href="https://github.com/phunkelambo/VanillaWeatherApp"
+    target="_blank"
+    >Open-source code</a
+    > by Phunke Lambo
+</div>
+</div>
 <script src="src/index.js"></script>
-</div>
-</div>
-</div>
 </body>
 </html>

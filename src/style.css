@@ -1,41 +1,49 @@
 body {
         font-family:  "Times New Roman", Times, serif;
+        color: whitesmoke;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    display: inline;
+    margin: 0px;
+    padding: 5px;
+}
+
+li {
     list-style: none;
-   font-size: 18px;
+   font-size: 16px;
+   font-weight: bold;
+   line-height: 18px;
+   padding: 0px;
    margin-block-start: 0px;
   }
 
-p {
-    color:  black;
-    font-size: 16px;
-    margin-top: 0px;
-    margin-left: 15px;
-    padding-top: 0px;
-}
-
-.container {
-    background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, hsla(180, 65%, 51%, 0.459), #103e50ec);
-    border-radius: 10px;
-    padding: 10px 5px 50px 10px;
-    inline-size: 500px;
-    margin: 30px auto;
-    max-width: 600px;
-    border: 1px solid rgba(175, 127, 171, 0.144);
+  li.first-letter {
+    text-transform: capitalize;
   }
 
+  .container {
+  border-radius: 10px;
+  background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, hsl(257, 84%, 65%) 0%, hsl(257, 52%, 42%) 100.2%);
+  padding: 20px 10px 5px 5px;
+  inline-size: 500px;
+  border-radius: 10px;
+  }
+
+.vanillApp-wrapper {
+    max-inline-size: 200px;
+    margin:auto;
+}
+
+.vanillApp {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
   h1 {
-    padding: 0px; 
-    max-width: 100%;
-    text-align: start;
     font-weight: bold;
-    display: inline;
-    line-height: 18px;
+    display: inline-block;
+    line-height: 30px;
     margin-block-start: 0px;
     margin-block-end: 5px;
     margin-inline-end: 8px;
@@ -43,60 +51,59 @@ p {
   
   h2 {
     font-size: 16px;
+    padding: 15px 0px 15px 20px;
     max-inline-size: 100%;
-    text-align: center;
-    color: whitesmoke;
-    margin-bottom: 10px;
-    line-height: 10px;
+    margin: 20px;
   
   }
-
-  h3 {
-    font-size: 14px;
-    text-align: center;  
-    font-weight: bold;
-    margin-left: 150px;
-    margin-top: 0px;
-    margin-bottom: 40px;
-  }
+ .searchDetails {
+   margin-block-end: 30px
+ }
 
   #Icon {
-    display: block;
-    text-align: center;
-    margin-left: 75px;
-    margin-top: 5px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    
+    margin-inline-end: 20px;
+  
   }
 
   #city {
     font-weight: bold;
     font-size: 38px;
-    text-align: left;
-    margin-top: 10px;
+    text-align: start;
+    margin-block-start: 15px;
     margin-inline-end: 8px;
-    margin-block-end:10px;
+    margin-block-end:5px;
     line-height: 20px;
 
   }
 
-  #Temperature {
-      font-weight: bold;
-      font-size: 28px;
-      text-align: center;
-      margin-inline-end: 8px;
-      margin-block-end: 10px;
-  }
-
-  #searchInput {
-      margin-bottom: 5px;
-    
+  #temperature {
+     font: size 54px;
+     font-weight: 400;
+     line-height: 18px;
+  
   }
 
 a {
-    color: #c8ff00;
+    color: hwb(51 0% 0%);
   }
-span.celsius {
+
+  .celsius {
       position: relative;
+      font-size: 18px;
+      inset-block-start: -28px;
   }
+
+  .float-left {
+  list-style-type: none;
+  text-align: start;
+  display: inline-block;
+  padding-inline-start: 10px;
+  line-height: none;
+  font-weight: bold;
+  margin-block-start: 0px;
+}
+
+#condition {
+text-align: center;
+display: inline;
+}
