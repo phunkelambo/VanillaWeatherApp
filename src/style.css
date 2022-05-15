@@ -17,98 +17,191 @@ li {
    margin-block-start: 0px;
   }
 
-  li.first-letter {
-    text-transform: capitalize;
-  }
-
   .container {
   border-radius: 10px;
   background-image: radial-gradient(circle farthest-corner at 22.4% 21.7%, hsl(257, 84%, 65%) 0%, hsl(257, 52%, 42%) 100.2%);
-  padding: 20px 10px 5px 5px;
+  padding: 10px 10px 5px 5px;
   inline-size: 500px;
   border-radius: 10px;
   }
 
-.vanillApp-wrapper {
-    max-inline-size: 200px;
-    margin:auto;
+
+.search {
+  margin: 0 auto;
+  max-inline-size: 500px;
+  position: relative;
+  inset-inline-start: 20px;
 }
 
-.vanillApp {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+.searchInput {
+  margin: 0 auto;
+  max-inline-size: 300px;
 }
 
-  h1 {
-    font-weight: bold;
-    display: inline-block;
-    line-height: 30px;
-    margin-block-start: 0px;
-    margin-block-end: 5px;
-    margin-inline-end: 8px;
-  }
-  
-  h2 {
-    font-size: 16px;
-    padding: 5px 15px 10px 20px;
-    max-inline-size: 100%;
-    margin: 5% 0;
-    display: inline;
-  
-  }
- .searchDetails {
-   margin-block-end: 30px
- }
+.searchIcon {
+  position: relative;
+  inset-inline-end: 84px;
+  inset-block-start: 2px;
+  font-size: 20px;
+  transition: all 150ms ease-in-out;
+}
 
- 
-  #city {
-    font-weight: bold;
-    font-size: 38px;
-    text-align: start;
-    margin-block-start: 15px;
-    margin-inline-end: 8px;
-    margin-block-end:5px;
-    line-height: 20px;
+.searchIcon:hover {
+  color: #b582f0;
+}
 
-  }
+.currentLocation {
+  background: white;
+  font-size: 12px;
+  text-align: center;
+  border: thin solid rgb(228, 227, 227);
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgb(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 15px auto;
+  padding: 5px 15px;
+  transition: all 150ms ease-in-out;
+}
 
-  .temp.temp {
-     font-size: 34px;
-     font-weight: bold;
-     line-height: 18px;
-  }
+.currentLocation:hover {
+  background-color: #b582f0;
+  color: white;
+}
 
-a {
-    color: hwb(51 0% 0%);
-  }
+.searchDetails {
+  text-align: center;
+  padding: 5px 24px 0;
+  border-radius: 20px;
+}
 
-  .temp {
-    font-size: 48px;
-    padding: 10px;
-    line-height: 1.2px;
-    max-inline-size: 100%;
-    position: relative;
-     
-  }
+.cityName {
+  font-weight: bold;
+  font-size: 32px;
+  text-transform: capitalize;
+  display: block;  
+  text-align: center;
+}
 
- #tempC,
+.tempContainer {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 auto;
+  max-inline-size: 200px;
+  position: relative;
+}
+
+#tempC,
 #tempf {
-      position: relative;
-      inset-block-start: -34px;
-      margin-inline-start: 10%;
-      text-align: center;
-      margin-block-start: 0px;
-      font-size: 12px;
-  }
- 
-  .weatherIcon {
-   
-    display: block;
-    margin-inline-start: 10%;
- }
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  inset-inline-start: 185px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
 
-#condition {
-text-align: center;
-display: inline;
+#tempC:hover,
+#tempf:hover {
+  font-size: 22px;
+}
+
+
+#tempf{
+  inset-block-start: 30px;
+}
+
+#tempC {
+  inset-block-start: 60px;
+}
+
+.active-link {
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+.active-link:hover {
+  color: black;
+}
+
+.currentTempWrapper {
+  margin-block-start: -20px;
+}
+
+#currentTemp {
+  font-size: 14px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.moredetails {
+  margin: 0 auto;
+  max-inline-size: 600px;
+  font-size: 14px;
+}
+
+
+.iconWrapper {
+  margin: 0 auto;
+}
+
+.image {
+  max-inline-size: 100px;
+  margin-block-start: -40px;
+}
+
+.lineBreak {
+  border-block-start: thin solid #178aa5;
+  margin-block-end: 20px;
+}
+
+.card-title {
+  text-transform: uppercase;
+  text-align: center;
+  inline-size: 90px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.card {
+  background: rgb(255, 255, 255, 0.4);
+  max-block-size: 130px;
+  inline-size: 90px;
+  margin: 15px 0 24px;
+  padding: 22px 8px;
+  border-radius: 15px;
+  box-shadow: 0 1px 8px rgb(57, 127, 142, 0.3);
+}
+.card-content {
+  font-size: 14px;
+  color: rgb(42, 42, 42);
+  font-weight: 400;
+}
+.card-temp-min {
+  color: rgb(136, 136, 136);
+}
+
+.card-image {
+  max-inline-size: 60px;
+  opacity: 0.7;
+  margin-block-start: 10px;
+}
+
+.footer {
+  font-size: 13px;
+  color: rgb(42, 42, 42);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: whitesmoke;
+   transition: all 150ms ease-in-out;
+}
+
+.footer a:hover {
+  color: #bad834;
 }

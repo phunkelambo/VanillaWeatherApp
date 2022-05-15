@@ -13,71 +13,80 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
-
+  
     <title>Vanilla WeatherApp</title>
 </head>  
 
 <body>
 <div class="container">
-    <div class="vanillaApp-wrapper">
-        <div class="vanillaApp">
-            <form id="searchForm">
-            <input type="text" 
-            class="search" 
-            id="cityName" 
-            placeholder="Type city here" 
-            autocomplete="off" 
-            autofocus="on" 
-            />
-      <input type="submit" value="search" />
-</div>
-</div>
-</form>
-<div class="searchDetails">
-<h1 id="city">
- NewYork
-</h1>  
-<ul>
-    <li id="date"></li>
-    <li id="time"></li>    
-   </ul>
-   </div>
-   <div class="row">
-        <div class="col">
-        <div class="d-flex weather-temperature">
-      <img
-        src=""
-        alt="cloudy"
-        width="100px"
-        class="float-left"
-        id="icon"
-      />
-      <div class="float-left">
-        <h2 class="weatherInfo" id="temperature"></h2>
-            <span class="units"> 
-              <a href="#" id="tempC" class="active">°C |</a> 
-            <a href="#" id="tempf">°F</a>
-            </span>
-            </div>
-            </div>
-            </div>
-      </div>     
-    <h3>
-        <div class="row">
-      <div class="col" >
-        <ul id="condition">
-          <li>Cloudy <span id="description"></span></li>
-          <li>Humidity: <span id="humidity"></span>%</li>
-          <li>Wind: <span id="wind"></span> mph</li>
-        </ul>
+    <form class="search" >
+        <div class="col-10">
+        <input type="text" 
+        class="form-control searchInput"
+        id="cityName" 
+        placeholder="Enter city here" 
+         autocomplete="off" 
+        autofocus="on" 
+    />
     </div>
-</h3>
-<div id="footer">
+
+<div class="col-2">
+    <button type="submit" class="btn btn-link button-search">
+        <img src="image/search (1).png" id="searchIcon" />
+    </button>
+    </div>
+</form>
+<div>
+    <button class="currentLocation">
+      Current Location <img src="image/location.png" />
+    </button>
+  </div>
+
+<div class="searchDetails">
+    <ul>
+    <li class="cityName">Miami</li>
+    <li class="date"></li>
+</ul>
+</div>
+
+    <div class="tempContainer">
+      <span id="temperature"></span>
+      <a href="#" id="tempf">°F</a>
+      <a href="#" id="tempC">°C</a>
+    </div>
+
+    <div class="currentTempWrapper">
+      <span id="currentTemp"></span>
+    </div>
+
+    <div class="moreDetails">
+      <div class="col">
+        <img src="image/wind (3).png" id="windIcon" />
+        <div class="wind">
+      </div>
+    </div>
+
+      <div class="col">
+        <img src="image/humidity.png" id="humidityIcon" />
+        <div class="humidity">
+      </div>
+     </div>
+   
+    <div class="iconWrapper">
+      <img class="image" id="icon" src="" alt="cloudy" />
+    </div>
+
+    <div class="lineBreak"></div>
+    <div id="forecast"></div>
+
+<div class="footer">
     <a 
     href="https://github.com/phunkelambo/VanillaWeatherApp"
     target="_blank"
     >Open-source code</a
     > by Phunke Lambo
+</div>
+
 </div>
 </div>
 <script src="src/index.js"></script>
