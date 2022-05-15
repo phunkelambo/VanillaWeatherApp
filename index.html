@@ -34,36 +34,41 @@
 </div>
 </form>
 <div class="searchDetails">
-    <h1 id="city">
- NewYork  
+<h1 id="city">
+ NewYork
+</h1>  
 <ul>
     <li id="date"></li>
     <li id="time"></li>    
    </ul>
    </div>
-</h1>
-   <h2>
-    <div class="row">
-       <div class="col-9">
-       <div class="clearfix temp">
-    <img src="" class="float-left" id="Icon" alt="" /> 
-       <div class="float-left">
-        <div class="weather-forecast" id="forecast">
-        <strong id="temperature"></strong
-            ><span id="tempC"> °C</span> <span id="tempf"> | °F</span>
-        
+   <div class="row">
+        <div class="col">
+        <div class="d-flex weather-temperature">
+      <img
+        src=""
+        alt="cloudy"
+        width="100px"
+        class="float-left"
+        id="icon"
+      />
+      <div class="float-left">
+        <h2 class="weatherInfo" id="temperature"></h2>
+            <span class="units"> 
+              <a href="#" id="tempC" class="active">°C |</a> 
+            <a href="#" id="tempf">°F</a>
+            </span>
             </div>
-       </div>
-       </div>
-       </div>
-    </div>
-    </h2>
+            </div>
+            </div>
+      </div>     
     <h3>
+        <div class="row">
       <div class="col" >
         <ul id="condition">
           <li>Cloudy <span id="description"></span></li>
           <li>Humidity: <span id="humidity"></span>%</li>
-          <li>Wind: <span id="wind"></span> m/h</li>
+          <li>Wind: <span id="wind"></span> mph</li>
         </ul>
     </div>
 </h3>

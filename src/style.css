@@ -51,20 +51,17 @@ li {
   
   h2 {
     font-size: 16px;
-    padding: 15px 0px 15px 20px;
+    padding: 5px 15px 10px 20px;
     max-inline-size: 100%;
-    margin: 20px;
+    margin: 5% 0;
+    display: inline;
   
   }
  .searchDetails {
    margin-block-end: 30px
  }
 
-  #Icon {
-    margin-inline-end: 20px;
-  
-  }
-
+ 
   #city {
     font-weight: bold;
     font-size: 38px;
@@ -76,33 +73,40 @@ li {
 
   }
 
-  #temperature {
-     font-size: 54px;
-     font-weight: 400;
+  .temp.temp {
+     font-size: 34px;
+     font-weight: bold;
      line-height: 18px;
-  
   }
 
 a {
     color: hwb(51 0% 0%);
   }
 
-  #tempC,
-  #tempf {
-      position: relative;
-      font-size: 18px;
-      inset-block-start: -28px;
+  .temp {
+    font-size: 48px;
+    padding: 10px;
+    line-height: 1.2px;
+    max-inline-size: 100%;
+    position: relative;
+     
   }
 
-  .float-left {
-  list-style-type: none;
-  text-align: start;
-  display: inline-block;
-  padding-inline-start: 10px;
-  line-height: none;
-  font-weight: bold;
-  margin-block-start: 0px;
-}
+ #tempC,
+#tempf {
+      position: relative;
+      inset-block-start: -34px;
+      margin-inline-start: 10%;
+      text-align: center;
+      margin-block-start: 0px;
+      font-size: 12px;
+  }
+ 
+  .weatherIcon {
+   
+    display: block;
+    margin-inline-start: 10%;
+ }
 
 #condition {
 text-align: center;
