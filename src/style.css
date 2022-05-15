@@ -77,7 +77,7 @@ li {
   }
 
   #temperature {
-     font: size 54px;
+     font-size: 54px;
      font-weight: 400;
      line-height: 18px;
   
@@ -87,7 +87,8 @@ a {
     color: hwb(51 0% 0%);
   }
 
-  .celsius {
+  #tempC,
+  #tempf {
       position: relative;
       font-size: 18px;
       inset-block-start: -28px;

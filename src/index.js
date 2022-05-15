@@ -88,8 +88,8 @@ function displayForecast(response) {
 
 
 function getForecast(coordinates) {
-  let apiKey = "3867ba5bdd3dc3e708c90982a1135dd";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiKey = "8678fe46de622085a6470ee25e2466ff";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coord.lat}&lon=${coord.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -100,25 +100,26 @@ function displayTemperature (response) {
     document.querySelector(`#wind`).innerHTML = Math.round(response.data.wind.speed);
     document.querySelector(`#humidity`).innerHTML = Math.round(response.data.main.humidity);
     document.querySelector(`#description`).innerHTML = response.data.weather[0].description;
+    document.querySelector("#tempF").innerHTML = Math.round(
+      document.getElementById("#tempC".value * 9) / 5 + 32
+    );
     
-    
-    celsius = response.data.main.temp;
-    
-    
-    let iconElement = document.querySelector(`#icon`);
+    tempC = response.data.main.temp;
 
-    iconElement.setAttribute(
-        "src", 
-        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+    iconElement = document.querySelector("#icon");
 
-  getForecast(response.data.coord);
-}
+    iconElement.innerHTML(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    getForecast(response.data.coord);
+  }
 
   
-function searchInput(city) {
-  let apiKey = "3867ba5bdd3dc3e708c90982a1135dd";
+  function search(city) {
+  let apiKey = "8678fe46de622085a6470ee25e2466ff";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -126,13 +127,13 @@ function searchInput(city) {
   function handleSubmit(event) {
     event.preventDefault();
   let cityElement = document.querySelector(`#cityName`);
-  searchInput(cityElement.value);
+  search(cityElement.value);
   }
 
   let form = document.querySelector("#searchForm");
   form.addEventListener("sumbit", handleSubmit);
 
-  searchInput("New York");
+  search("New York");
  
 
 
